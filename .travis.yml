@@ -8,6 +8,7 @@ script:
 - npm run build
 # - npm test
 deploy:
+  skip_cleanup: true
   provider: firebase
   token:
     secure: W9dxfg2mvgcGbOwYEsWzTaUb3CFTbfWPQl8RKlqnS60nUor724Ws2xT8TuYVDp/kDUZogIAN0eU6S5n1QtUdm8YRTYrZuzt91TNa/kiu53pGqFBsWMJAf4GsX1SDDJAQwdXjTg/HbH9+/pxxHRMyf1FdSxf6wOH5e5K/fxDJfUzlxwPZl/Od8RDrV7fBlRjJPXB+K20BYSzjD3KWVgj4tnibsZbaO8/MEohfxa0l6GM6NpSHKhCCjX6gOLVmhPlAnh161qKzrsiUg7t6NsEMgvwG0KDcwR5n60ulXuZK+5fadqjHb2NWw5SgMtkMzKcE3bjgClwHIr6tY/EgQ5ApBMcM8VuNVdrNYhuXB6xbYGhtk5DEpkyZNY1C6hzDMjVKh8bqb+KbD4kp77d4ByBWbMOkpsxdVlWSb1RTZ/Gk5DmPk4Rs3dyA+E7JUSccCIMLUqEnxYXlhHSxmJ+FLKllE3gz1hYSqYeQq6Rr8oNWOEODLxTyKWRt++jLBFpuBB9kXbvOwOIjEjGeGGvRBSjhgczcTmg/wtFfuJ2G/R4UxpN62J31v5SBwODA5mJf2ZfJqSxn2bNzYFz2jq3C01mK2oZmmnVglwy9c+4nSq9GRNlJlcCDKxu/YDoxcvDuRYgdZiYX1EXPf+N0uowv7IjC/J/H95Ner/Lq2N/QmIMEoaI=
