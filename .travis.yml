@@ -9,7 +9,7 @@ cache:
 before_script:
   - npm start &
 script:
-  - npm nft
+  - npm run nft
   - pkill node
   - npm run build
   - npm test
