@@ -7,7 +7,7 @@ cache:
     - node_modules
     - $HOME/.sonar/cache
 before_script:
-  - npm start
+  - npm start &
 script:
   - npm nft
   - pkill node
