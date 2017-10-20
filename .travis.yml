@@ -9,11 +9,10 @@ cache:
 before_script:
   - npm start &
 script:
-  - npm run nft
-  - pkill node
   - npm run build
   - npm test
   - sonar-scanner
+  - npm run nft
 deploy:
   skip_cleanup: true
   provider: firebase

@@ -17,7 +17,8 @@ nightwatch_config = {
         'browserstack.key': process.env.BROWSERSTACK_ACCESS_KEY || 'L6pBcdk9VbNpyR3mpKD6',
         'browserstack.debug': true,
         'browserstack.local': true,
-        'browser': 'chrome'
+        'browser': 'chrome',
+        'browserstack.localIdentifier': process.env.BROWSERSTACK_LOCAL_IDENTIFIER
       }
     }
   }
