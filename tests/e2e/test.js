@@ -1,11 +1,9 @@
 module.exports = {
-  'Google\'s Search Functionality' : function (browser) {
+  'Retroapp Functionality' : function (browser) {
     browser
-      .url('https://www.google.com/ncr')
+      .url('http://localhost:300')
       .waitForElementVisible('body', 1000)
-      .setValue('input[type=text]', 'BrowserStack\n')
-      .pause(1000)
-      .assert.title('BrowserStack - Google Search')
+      .assert.title('React App')
       .end();
   }
 };

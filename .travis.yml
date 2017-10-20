@@ -6,7 +6,11 @@ cache:
   directories:
     - node_modules
     - $HOME/.sonar/cache
+before_script:
+  - npm start
 script:
+  - npm nft
+  - pkill node
   - npm run build
   - npm test
   - sonar-scanner
