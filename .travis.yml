@@ -1,12 +1,15 @@
 language: node_js
+sudo: required
 node_js:
   - 8
 cache:
   directories:
-  - node_modules
+    - node_modules
+    - $HOME/.sonar/cache
 script:
   - npm run build
   - npm test
+  - sonar-scanner
 deploy:
   skip_cleanup: true
   provider: firebase
@@ -15,3 +18,14 @@ deploy:
 notifications:
   slack:
     secure: kouTM5rKmEis6mna0zUD5mZZqAm5AMLan3TdOJknUbVJuo/+WjdgfYYS3Q71N7LhiBGRtyQg0YaX97lyfDITMbmEULG+gluXUSxTDxtxBh/AnDuBlK7rFm5wUMq+8qKG3CWtiCteghIfdjbtwVmVydKnW0qQcPNOr3WMo1Rd4e6M5oXAs0rxbp9VsQE22n7K/GSG2zS7+2nOWpOB/zepIkgoKIwsNWApZzGkLAsC8GMn/ZIV1I8VaPEjG6gAs1Q9AFa7cAh0s7SB20OgJ/Y0uCOK/yXdwdbYFM1lsb5LeiVprQgz/dbau63PXExncZE/sgBtzHprUFWzSZUagp/EptMej0iuDapEcHMHEi2JVaxi2eJZ7eil6Qxusq4hu2KP901aYV8dL+ECNbHkskdUmYEceCC/A6S+jw7Fo2BfEua2LGVfdMwVYrsWSp1BGBn9KRm86qnnol3hj/2OBQO7xbhfMHQicD+apQu3yTYTuZTcukauXFdQAbQkvk6GyTpmOBeRuwuyoe4LXD2QzzOGkSV0ZuecaS1qLIvz8UadFs1jvnV9h72QeCiBXA1hVkDBpaptsPahNMINIG2uQvZhV6kgAnzEM4Ju+ZC0D+yVk/pNkdGTLP72OeJ47AlHn0EU+BzeFQywv+oQ79Ehjtgt4NxiGRSvZP6CtcZPGdHgeAc=
+addons:
+  browserstack:
+    username: sumanpaul1
+    access_key:
+      secure: IFixKKEifdkogczqe3ZMvOwYl5QxWhAtHYgOBmoFzdWo/tlxt8d3UDCItWV24ZgQdYGRyfqJLjaTZZRMR6Ht7whGWPSbfSlLFvJvPHcbReCFR+Re3UWA160m/qsZSfHybdXkwgcjelYeAZL8HSJAxD8DMZH8Q4iJtAYYCPYSxFyaS6pbtlnya2LQGAx/ftrAsbcJo9BNLDwnDJVoAm9/1zTfY7Ba4GPlxo58ZTdH58BrRvoeQZd3xziWauIc0D9xGXzB7dnnSRsJB1Am/VctOz8kdSb/Nc+bGA+rqKqzFMFQNFz4TsRF2B4qr9KDgBtH4QQ0EYh65Uxt6lAkt4yTp8H7Q2CMQYRgHZ3wn1TeZk7CHQnAEWwBUKO6n8VVoOEJ4s55bDUzjo0RXT+zKjMosOuEtEl0QkLcvLQxb2876rGUU2AgK7S1mL0/BaGXwijTHPwnPe/30PzZ5MLpP/xoAQFNzZJXUBnUKZ1pOQkoXIA+SeFG93FLsY4qp9gK7mYmuaSyjsE6IG/I4P91pgar8yB/CKmyjTTSH02dzu2qBR52QvUmp6+Zv/DYOWmjtOF46pZGBUtQRv8rH2NJB0gi4mjsaR6iTXcaIwZy6VCehT6/E0GL5MIvNWp/Ym/jnQZGUUkFQN14Vy9qKt3QAx/hHMlS0gyPsHzvHseTCNPnMsw=
+  sonarcloud:
+    organization: skeep-github
+    token:
+      secure: OJMrVhKhvH/hsBuW0OFFqLeNn3KsIvcYDgi8qrIgFLc2DV8MsteqcmTwN8/1Pyqvr+pyfPjGnMt6ocFQdZ9wojnmX4UYvtnPVbhFE7CVtdyLrTTv6cwkoIjLDEeAiN2RXu1KIbBkqPM+6KWdrvlHEbgV2XHycmonhLhbBOtovD4UEu6sS5IN0ZUlQab9TSfSkJRukfVxMRBLmDZ7BpjX+9thxMUWtk1e22cNDyXCfUDYpphVf757nFx8KbWlicJiz69+hMyk00MTY4aS3x1VTaxMYSexybbIGnbUdygTPbl/hkRpUsjZDfP77jljUiWUKEsLX0eEmF1qE3Zca6nr+DIqgPmXrTtnuVBXgLXQOLdDxZLq+NzqJweXGNPNw+ZGDg0Jr8oJUEP5JVSmFk6vY2z1YMo1wxOdpLakyvA01Nhe/oSp1wDybJGVjE79CAMFZjh6B24a2gxYUc4GKc12Uaphu8WbENV5IFD8Kj0RTxqF7Sg/csAIlQJ34maAn32ShS3Q4ZaTEEsU0ZwRAG0bDq1znAteJEJmJAs6gTqtMs70Co44qP6kfHxMUXeGLPSIt7MIfB9uHR3/Z91FcJiZl98ITtDJB9oR4gIkfXsPMZr3cHvgfAbkIeJHv3fPLOrAisRohcBm0SbiHqgZdP8Z2wQCqIBCjosfoaE0uxeQgLI=
+jdk:
+  - oraclejdk8
