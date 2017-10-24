@@ -29,7 +29,7 @@ class App extends Component {
           </nav>
           <div className="wrapper">
             <div className="text">
-              <span className="text1" id="brand">Welcome to the Bank of Future</span>
+              <span className="text1" id="brand">Welcome to the Future</span>
               <a href="#" className="button">read more</a>
             </div>
           </div>
