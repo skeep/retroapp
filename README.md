@@ -1,3 +1,5 @@
+[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=bVVXc2g2UDlOY0JkYkZCNEMrQjJzZUNrT3ZuOW01NURVV3AyT0VZakxBRT0tLTdzQ3RZNmkzcG5GWVpKSVhCNHNmaHc9PQ==--854e8cd16843b4909c6b15f2610ff0dc5c79f917)](https://www.browserstack.com/automate/public-build/bVVXc2g2UDlOY0JkYkZCNEMrQjJzZUNrT3ZuOW01NURVV3AyT0VZakxBRT0tLTdzQ3RZNmkzcG5GWVpKSVhCNHNmaHc9PQ==--854e8cd16843b4909c6b15f2610ff0dc5c79f917)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
